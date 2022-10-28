@@ -1,2 +1,5 @@
 # fpl2duck
-Build a DuckDB database for Fantasy Premier League
+
+![Duck](duck.jpg)
+
+Build a [DuckDB](https://duckdb.org/) database for Fantasy Premier League

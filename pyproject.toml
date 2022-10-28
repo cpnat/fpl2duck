@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "fpl2duck"
+version = "0.1.0"
+description = "Bulid a DuckDB database for Fantasy Premier League"
+authors = ["Colin Nattrass <cpnattrass@googlemail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
