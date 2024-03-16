@@ -7,14 +7,20 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-requests = "^2.28.1"
 pyright = "^1.1.277"
 mypy = "^0.982"
 flake8 = "^5.0.4"
 python-dateutil = "^2.8.2"
 pylint = "^2.15.5"
-duckdb = "^0.8.1"
+duckdb = "^0.10.0"
+requests = "^2.31.0"
+pydantic = "^2.6.3"
+pyarrow = "^15.0.1"
 
+
+[tool.poetry.group.dev.dependencies]
+datamodel-code-generator = "^0.25.4"
+pre-commit = "^3.6.2"
 
 [build-system]
 requires = ["poetry-core"]

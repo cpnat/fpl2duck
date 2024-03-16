@@ -1,0 +1,53 @@
+default_language_version:
+  python: python3.11
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: [
+          "--profile",
+          "black",
+          "--line-length",
+          "120",
+          "--lines-after-imports",
+          "2",
+          "--lines-between-types",
+          "1",
+          "--atomic",
+          "-o --KNOWN-THIRD-PARTY",
+          "cognite",
+          "pytest",
+        ]
+
+  - repo: https://github.com/psf/black
+    rev: 23.7.0
+    hooks:
+      - id: black
+        args: [ "--line-length","120" ]
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: debug-statements
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-builtin-literals
+      - id: end-of-file-fixer
+      - id: check-ast
+      - id: check-docstring-first
+
+# Mypy must be run in the local system environment, not in the pre-commit environment.
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: mypy .
+        files: ^.*.(py|pyi)$
+        language: system
+        pass_filenames: false
