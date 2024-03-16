@@ -13,7 +13,7 @@ document.querySelector('#app').innerHTML = `
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <h1>⚽ Hello Ducklovers 🦆</h1>
   <div class="form-floating">
-    <textarea placeholder="Enter your query" id="query" name="query" rows="5" cols="60"></textarea>
+    <textarea placeholder="Enter your query" id="query" name="query" rows="30" cols="100"></textarea>
   </div>
   <button type="button" id="submit" class="btn btn-success">Submit</button><br>
   <div id="result"></div>

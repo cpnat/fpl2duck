@@ -2,16 +2,16 @@ import logging
 
 from models.bootstrap import Bootstrap
 from pydantic import BaseModel, TypeAdapter
-from utils import get_request_from_dump
-
+from extractors.utils import get_request_from_dump
+from extractors.utils import get_request
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
 def get_bootstrap() -> Bootstrap:
-    # response: dict = get_request(url="https://fantasy.premierleague.com/api/bootstrap-static/")
-    response = get_request_from_dump("/Users/colin/projects/fpl2duck/fpl2duck-backend/api/dump/bootstrap.json")
+    response: dict = get_request(url="https://fantasy.premierleague.com/api/bootstrap-static/")
+    # response = get_request_from_dump("/Users/colin/projects/fpl2duck/fpl2duck-backend/dump/bootstrap.json")
     ta = TypeAdapter(Bootstrap)
     return ta.validate_python(response)
 

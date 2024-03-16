@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, RootModel
 
 
 class AItem(BaseModel):
@@ -45,5 +45,5 @@ class ModelItem(BaseModel):
     pulse_id: int
 
 
-class Fixtures(BaseModel):
-    __root__: List[ModelItem]
+class Fixtures(RootModel):
+    root: List[ModelItem]

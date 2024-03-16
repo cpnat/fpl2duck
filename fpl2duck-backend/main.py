@@ -4,6 +4,8 @@ import logging
 import duckdb
 
 from extractors.bootstrap_extractor import get_bootstrap_tables
+from extractors.fixtures_extractor import get_fixtures_table
+from extractors.element_summary_extractor import get_element_summary_table
 from extractors.utils import pydantic_records_to_arrow_table
 
 
@@ -13,11 +15,14 @@ logging.basicConfig(level=logging.INFO)
 
 def load_data():
     bootstrap_tables_dict = get_bootstrap_tables()
+    fixtures_table_dict = get_fixtures_table()
+    element_summary_dict = get_element_summary_table()
+    tables = {**bootstrap_tables_dict, **fixtures_table_dict, **element_summary_dict}
 
     logger.info("Creating a database connection")
     conn = duckdb.connect(database="fpl2duck.db", read_only=False)
 
-    for table_name, records in bootstrap_tables_dict.items():
+    for table_name, records in tables.items():
         logger.info(f"Creating table: {table_name}")
 
         # Convert Pydantic records to Arrow table
