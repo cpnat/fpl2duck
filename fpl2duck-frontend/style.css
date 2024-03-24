@@ -11,6 +11,14 @@
   margin: 20px;
 }
 
+#accordion {
+  width: 75%;
+  margin: auto;
+  text-align: left;
+}
+
+.card-header{height: 40px; padding: 0px;}
+
 #submit {
   margin-bottom: 20px;
   width: 75%;
@@ -20,6 +28,7 @@
 #result {
   margin: auto;
   width: 75%;
+  text-align: left;
 }
 
 #query {
@@ -27,3 +36,24 @@
   width: 75%;
   margin-top: 20px;
 }
+
+#queryBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#queryEditor {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  height: auto;
+  width: 75%;
+  text-align: left;
+}
+
+/* .cm-editor { */
+/*   border: 1px solid #eee; */
+/*   height: auto; */
+/*   width: 75%; */
+/* } */
