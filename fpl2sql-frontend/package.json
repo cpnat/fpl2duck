@@ -1,0 +1,22 @@
+{
+  "name": "vite-browser",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.7"
+  },
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/lang-sql": "^6.6.2",
+    "@duckdb/duckdb-wasm": "^1.14.1",
+    "@pgrabovets/json-view": "^2.7.5",
+    "bootstrap": "^5.3.3",
+    "codemirror": "^6.0.1",
+    "handsontable": "^14.2.0"
+  }
+}
